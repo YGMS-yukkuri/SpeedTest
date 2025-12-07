@@ -1,0 +1,45 @@
+.circles {
+    display: flex;
+    gap: 20px;
+}
+
+.c1,
+.c2,
+.c3,
+.c4 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.c1 {
+    background-color: #19a68c;
+    animation: c1 2.5s infinite;
+}
+
+.c2 {
+    background-color: #f63d3a;
+    animation: c1 2.5s 0.25s infinite;
+}
+
+.c3 {
+    background-color: #fda543;
+    animation: c1 2.5s 0.5s infinite;
+}
+
+.c4 {
+    background-color: #193b48;
+    animation: c1 2.5s 0.75s infinite;
+}
+
+@keyframes c1 {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.2;
+    }
+    100% {
+        scale: 1;
+    }
+}

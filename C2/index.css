@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.spotlight {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    pointer-events: none;
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.75) 150px);
+}

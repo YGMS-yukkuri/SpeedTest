@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+div {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
+div:active {
+    background-color: yellow;
+    border: 5px solid black;
+}

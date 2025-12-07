@@ -1,0 +1,11 @@
+body {
+    width: 1280px;
+    background-color: aliceblue;
+}
+
+@media screen and (max-width: 1280px){
+    body {
+        width: 480px;
+        background-color: antiquewhite;
+    }
+}
