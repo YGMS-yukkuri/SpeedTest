@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    color: #000;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.dark {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    color: #FFF;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
