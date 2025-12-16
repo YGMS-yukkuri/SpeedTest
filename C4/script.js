@@ -4,20 +4,41 @@ const ctx = canvas.getContext("2d");
 
 let drawing = false;
 
+let x = 0;
+let y = 0;
 
 function changeColor(Color) {
-    Color = color;
+    color = Color;
 }
 
-canvas.addEventListener("mousedown", drawing = true)
-canvas.addEventListener("mouseup", drawing = false)
+document.addEventListener("mousedown", () => {
+    drawing = true
+    ctx.beginPath()
+    ctx.moveTo(x,y)
+})
+document.addEventListener("mouseup", () => {
+    drawing = false
+})
 
 canvas.addEventListener("mousemove", (e) => {
-    if(!drawing)return;
     x = e.clientX;
     y = e.clientY;
-
-    
-    ctx.strokeStyle = color;
+    if (!drawing) return;
+    if (drawing) {
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2
+        ctx.lineTo(x,y)
+        ctx.stroke()
+    }
 
 })
+
+function save(p)  {
+    if(!p)return;
+
+    const URL = canvas.toDataURL(`image/${p}`);
+    const a = document.createElement("a");
+    a.href = URL;
+    a.download = `image.${p}`
+    a.click();
+}
