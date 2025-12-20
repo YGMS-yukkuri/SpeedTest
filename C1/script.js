@@ -1,12 +1,12 @@
 const P = document.querySelector("p");
-function search(){
+function search() {
     let input = document.getElementById("input").value;
-    if(!input){
+    if (!input) {
         return
     }
     oldp = P.textContent
     console.log(oldp)
-    let newp = oldp.replaceAll(input,`<span>${input}</span>` );
+    let newp = oldp.replaceAll(input, `<span>${input}</span>`);
     console.log(newp)
     P.innerHTML = newp
     const spans = P.querySelectorAll("span");
