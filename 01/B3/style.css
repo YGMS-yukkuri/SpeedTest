@@ -2,6 +2,9 @@
     position: relative;
     transform-style: preserve-3d;
     animation: a 3s infinite;
+    width: 100px;
+    height: 100px;
+    margin: auto;
 }
 
 .a {
