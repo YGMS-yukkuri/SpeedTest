@@ -1,0 +1,116 @@
+body {
+    position: relative;
+}
+
+.anim {
+    width: 0;
+    height: 0;
+    animation: a 10s ease infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+@keyframes a {
+    0% {
+        border: 150px solid;
+        border-color: aqua;
+        border-radius: 0px;
+    }
+
+    33% {
+        border: 150px solid;
+        border-color: transparent transparent chartreuse transparent;
+        border-radius: 0px;
+    }
+
+    66% {
+        border: 150px solid;
+        border-color: darkorange;
+        border-radius: 150px;
+    }
+
+    100% {
+        border: 150px solid;
+        border-color: aqua;
+        border-radius: 0;
+        border-radius: 0px;
+    }
+}
+
+/*
+// ...existing code...
+body {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+}
+
+.anim {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* 各形状は重ねて配置し、opacityで切り替える 
+.anim > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 正方形 
+.square {
+    background: aqua;
+    border-radius: 0;
+    animation: sqFade 6s linear infinite;
+}
+
+/* 三角形（幅0高さ0のボーダーで作成）
+.triangle {
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 300px solid chartreuse;
+    background: transparent;
+    animation: triFade 6s linear infinite;
+}
+
+/* 円 
+.circle {
+    background: darkorange;
+    border-radius: 50%;
+    animation: ciFade 6s linear infinite;
+}
+
+/* フェードタイミング（0→33%: 正方形 / 33→66%: 三角形 / 66→100%: 円） 
+@keyframes sqFade {
+    0%, 30%   { opacity: 1; }
+    33%,100% { opacity: 0; }
+}
+@keyframes triFade {
+    0%, 30%   { opacity: 0; }
+    33%, 63%  { opacity: 1; }
+    66%,100%  { opacity: 0; }
+}
+@keyframes ciFade {
+    0%, 66%   { opacity: 0; }
+    66%, 96%  { opacity: 1; }
+    100%      { opacity: 0; }
+}
+// ...existing code...
+
+
+
+*/
