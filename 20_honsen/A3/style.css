@@ -1,0 +1,16 @@
+.maru {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    top: -400px;
+    left: -150px;
+    background-color: red;
+}
+
+.sikaku {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+}
