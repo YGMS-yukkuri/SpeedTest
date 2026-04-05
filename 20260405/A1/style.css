@@ -18,6 +18,10 @@ body {
     flex-direction: column;
 }
 
+.plan:nth-child(1) {
+    background-color: lightgreen;
+}
+
 button:hover {
     border: 3px double #000;
     transform: scale(1.3);
