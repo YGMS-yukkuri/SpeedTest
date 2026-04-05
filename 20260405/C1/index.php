@@ -1,10 +1,10 @@
 <?php
 $json = json_decode(file_get_contents("bbs.json"), true);
 
-if (isset($_POST["name"])) {
+if ($_SERVER["REQUEST_METHOD"] === "POST"  && isset($_POST["name"])) {
     $newData = [];
-    $id = array_key_last($json)["id"];
-
+    
+    $id = $json[array_key_last($json)]["id"] + 1;
     $username = $_POST["name"];
     $Rmessage = $_POST["message"];
 
@@ -14,9 +14,11 @@ if (isset($_POST["name"])) {
         "name" => $username,
         "message" => $Rmessage
     ];
+    array_push($json,$newData);
 
-    $newJson = json_encode(array_push($newData, $json), JSON_UNESCAPED_UNICODE);
+    $newJson = json_encode($json, JSON_UNESCAPED_UNICODE);
     file_put_contents("bbs.json", $newJson);
+    header("Location: ". $_SERVER["REQUEST_URI"]);
 }
 
 ?>
@@ -34,9 +36,9 @@ if (isset($_POST["name"])) {
 <body>
     <form action="" method="post">
         <label for="">ユーザーネーム</label>
-        <input type="text" name="name" require>
+        <input type="text" name="name" required>
         <label for="">メッセージ</label>
-        <input type="text" name="message" id="message" require>
+        <input type="text" name="message" id="message" maxlength="100" required>
         <button type="submit">送信</button>
     </form>
 
@@ -48,7 +50,7 @@ if (isset($_POST["name"])) {
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($json as $post): ?>
+            <?php foreach (array_reverse($json) as $post): ?>
                 <tr>
                     <th><?php echo ($post["name"]) ?></th>
                     <td><?php echo ($post["message"]) ?></td>
