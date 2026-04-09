@@ -106,6 +106,7 @@ function showall() {
 
     const pointshow = document.createElement("h2")
     pointshow.textContent = `合計: ${resPoint}`;
+    pointshow.classList.add("temp");
     thi.appendChild(pointshow);
 }
 
@@ -129,3 +130,14 @@ function load() {
     btnD.textContent = Q.btnD;
 }
 
+function restart() {
+    pointarr = [];
+    sec.style.display = "block";
+    thi.style.display = "none";
+    resultList.querySelectorAll("li").forEach(element => {
+        element.remove();
+    });
+    document.querySelector(".temp").remove();
+    questionIndex = 0;
+    load()
+}
