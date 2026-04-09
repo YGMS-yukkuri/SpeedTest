@@ -8,13 +8,13 @@
 </head>
 <body>
   <div id="showTime">00:00:00</div>
-  <ul id="LAP"></ul>
   <div class="buttons">
     <button type="button" onclick="start()">Start</button>
-    <button type="button">Stop</button>
-    <button type="button">Reset</button>
-    <button type="button">Lap</button>
+    <button type="button" onclick="stop()">Stop</button>
+    <button type="button" onclick="reset()">Reset</button>
+    <button type="button" onclick="lap()">Lap</button>
   </div>
+  <ul id="LAP"></ul>
   <script src="script.js"></script>
 </body>
 </html>
