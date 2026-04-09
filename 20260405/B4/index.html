@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>B4</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div id="pri">
+    <button onclick="start()">Start</button>
+  </div>
+
+  <div id="sec" style="display: none;">
+    <div id="question"></div>
+    <button id="btnA"></button>
+    <button id="btnB"></button>
+    <button id="btnC"></button>
+    <button id="btnD"></button>
+  </div>
+
+  <div id="thi" style="display: none;">
+    <ul id="result"></ul>
+  </div>
+
   <script src="script.js"></script>
 </body>
+
 </html>
